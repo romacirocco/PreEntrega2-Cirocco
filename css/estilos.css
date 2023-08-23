@@ -161,6 +161,20 @@ section.FotosIndex{
     grid-column: span 2;
 }
 
+/* Contact */
+/* estilos de menu */
+.bg-crema{
+    background-color: #f5ebe0;
+}
+
+.Menu-boot ul li a:hover{
+    background-color: #627a6a;
+}
+
+.nav-item:active{
+    color: #f5ebe0;
+}
+
 
 
 
