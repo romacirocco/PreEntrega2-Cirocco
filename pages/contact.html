@@ -6,7 +6,9 @@
     <title>Mica Tarelli</title>
 
     <link rel="shortcut icon" href="../multimedia/logo3.jpeg">
-    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/estilos.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,15 +17,38 @@
 </head>
 <body>
 
-    <header class="menu">
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="aboutme.html">Sobre mí</a></li>
-                <li><a href="weddings.html">Bodas</a></li>
-                <li><a href="backstage.html">Otras historias</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-crema">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse Menu-boot" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                    </a>
+                    <ul class="dropdown-menu bg-crema">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+                </ul>
+            </div>
+            </div>
         </nav>
     </header>
 
@@ -31,25 +56,24 @@
         <h2>Dejanos tu consulta</h2>
     </main>
 
-    <section>
+    <section class="container">
         
         <!-- Formulario -->
-        <section>
-            <form>
-                <label for="Nombre">Nombre</label>
+            <form class="row">
+                <label for="Nombre" col-3>Nombre</label>
                 <input type="text" required name="Nombre">
     
     
-                <label for="email">Correo electrónico</label>
+                <label for="email" col-2>Correo electrónico</label>
                 <input type="email" required name="email">
     
-                <label for="telefono">Teléfono</label>
+                <label for="telefono" col-2>Teléfono</label>
                 <input type="text" required name="telefono">
     
-                <label for="tipodeproyecto">Tipo de proyecto o evento</label>
+                <label for="tipodeproyecto" col-2>Tipo de proyecto o evento</label>
                 <input type="text" required name="tipodeproyecto">
     
-                <label for="Pais">Ubicación</label>
+                <label for="Pais" col-2>Ubicación</label>
                 <select required name="Pais"> 
                     <option value="ESP">España</option>
                     <option value="PT">Portugal</option>
@@ -60,7 +84,7 @@
                 </select>
     
     
-                <label for="mensaje">Mensaje</label>
+                <label for="mensaje" col-3>Mensaje</label>
                 <textarea name="mensaje" cols="30" rows="10"></textarea>
     
     
@@ -69,13 +93,18 @@
                 <input type="submit">
     
             </form>
-        </section>
+    </section>
 
     <section class="sectioncontacto">
     <a href="https://www.instagram.com/micatarelli/?igshid=MzRlODBiNWFlZA%3D%3D">Visitá mi Instagram!</a>
     </section>
+    
     <footer class="pie">
         <p>Copyright Roma Cirocco</p>
     </footer>
+
+    <!-- scrpipt de js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 </body>
 </html>
