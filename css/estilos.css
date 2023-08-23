@@ -1,0 +1,172 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+/* Index */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "DescripcionNarrar DescripcionNarrar DescripcionNarrar"
+        "FotosIndex FotosIndex FotosIndex"
+        "footer footer footer";
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+header.menu {
+    grid-area: header;
+    font-size: large;
+    color: black;
+    text-align: center;
+    background-color: #f5ebe0;
+    height: 75px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+header.menu a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2rem;
+}
+
+.menu{
+    justify-items: end;
+}
+
+ul li{
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-right: 0;
+}
+
+main.ContenidoPrincipal {
+    grid-area: main;
+    background-color: #3D4F43;
+    color: #f5ebe0;
+    padding: 1rem;
+    margin: 0;
+}
+
+.logo img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 150px; 
+}
+
+.titulo h1 {
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 0.6rem ;
+}
+
+section.DescripcionNarrar {
+    grid-area: DescripcionNarrar;
+    text-align: center;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    background-color: #f5ebe0;
+    font-size: large;
+}
+
+section.FotosIndex {
+    grid-area: FotosIndex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 1rem;
+    background-color: #f5ebe0;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.FotosIndex img {
+    width: 100%; 
+    height: auto;
+}
+
+footer#pie {
+    grid-area: footer;
+    background-color: #3D4F43;
+    color: #f5ebe0;
+    text-align: center;
+    height: 50px;
+    font-size: medium;
+    padding-top: 15px;
+    padding-bottom: 0;
+}
+
+/* About Me */
+
+.SobreMi{
+    display: grid;
+    grid-template-areas: 
+    " h1 h1 "
+    " img p ";
+    background-color: #3D4F43;
+    color: #f5ebe0 ;
+}
+
+.SobreMiTitulo {
+    font-size: 40px;
+    grid-area: h1;
+}
+
+.SobreMiDescripcion{
+    color: #3d4f43 ;
+    background-color: #f5ebe0;
+    font-size: 25px;
+    grid-area: p;
+}
+
+.FotoMicaela{
+    grid-area: img;
+}
+
+.SobreMi-pie{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: #f5ebe0;
+    color: #3D4F43;
+    font-size: medium;
+    height: 50px;
+    padding-top: 15px;
+}
+
+@media screen and (min-width: 1024px){
+    
+section.FotosIndex{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30% 30% 40%;
+        row-gap: 1rem;
+    }
+}
+
+.Foto2{
+    grid-row: span 2;
+}
+
+.Foto4{
+    grid-column: span 2;
+}
+
+
+
+
+
+
+
+
+
+
