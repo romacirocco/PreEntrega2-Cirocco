@@ -175,6 +175,34 @@ footer#pie {
 
 /* Contact */
 
+.ContactoH1{
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: #3D4F43;
+    color: #f5ebe0;
+}
+
+input{
+    background-color: #8dab97
+}
+
+select{
+    background-color: #8dab97;
+}
+
+textarea{
+    background-color: #8dab97;
+}
+
+label{
+    background-color: #f5ebe0;
+}
+
+.instagram{
+    background-color: #8dab97;
+}
+
 /* Estilos especificos para mobile  */
 
 @media screen and (max-width:480px){
@@ -187,6 +215,10 @@ footer#pie {
 
     .FotoMicaela{
         padding-right: 30px;
+    }
+
+    .SobreMiTitulo{
+        padding-top: 30px;
     }
 
     .navbar{
