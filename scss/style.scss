@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+/* Index */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas: 
+        "main main main"
+        "DescripcionNarrar DescripcionNarrar DescripcionNarrar"
+        "FotosIndex FotosIndex FotosIndex"
+        "footer footer footer";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+header{
+    .menu {
+    grid-area: header;
+    font-size: large;
+    color: black;
+    text-align: center;
+    background-color: #f5ebe0;
+    height: 75px;
+    width: 100%;
+    margin-bottom: 0;
+    justify-items: end;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        margin-left: 2rem;
+    }
+}
+
+
+ul{
+    li{
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-right: 0;
+    }
+}
+
+main.ContenidoPrincipal {
+    grid-area: main;
+    background-color: #3D4F43;
+    color: #f5ebe0;
+    padding: 1rem;
+    margin: 0;
+}
+
+.logo{
+    img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 150px; 
+}
+}
+
+.titulo{
+    h1 {
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 0.6rem ;
+}
+}
+
+section.descripcionNarrar {
+    grid-area: DescripcionNarrar;
+    text-align: center;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    background-color: #f5ebe0;
+    font-size: large;
+}
+
+section{
+    .fotosIndex {
+    grid-area: FotosIndex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 1rem;
+    background-color: #f5ebe0;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+        img {
+            width: 100%; 
+            height: auto;
+        }
+    }
+}
+
+
+footer{
+    #pie {
+    grid-area: footer;
+    background-color: #3D4F43;
+    color: #f5ebe0;
+    text-align: center;
+    height: 50px;
+    font-size: medium;
+    padding-top: 15px;
+    padding-bottom: 0;
+}
+}
+
+/* About Me */
+
+.sobreMi{
+    display: grid;
+    grid-template-areas: 
+    " h1 h1 "
+    " img p ";
+    background-color: #3D4F43;
+    color: #f5ebe0 ;
+    column-gap: 15px;
+    row-gap: 2px;
+}
+
+.sobreMiTitulo {
+    font-size: 30px;
+    grid-area: h1;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.sobreMiDescripcion{
+    color: #3d4f43 ;
+    background-color: #f5ebe0;
+    font-size: 25px;
+    grid-area: p;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-self: center;
+    display: flex;
+}
+
+
+.fotoMicaela{
+    grid-area: img;
+    align-items: center;
+    padding: 40px 0 80px 30px;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.sobreMi-pie{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: #f5ebe0;
+    color: #3D4F43;
+    font-size: medium;
+    height: 50px;
+    padding-top: 15px;
+}
+
+
+/* Contact */
+
+/* Estilos especificos para mobile  */
+
+@media screen and (max-width:480px){
+    .sobreMi{
+        grid-template-areas: 
+        "h1"
+        "img"
+        "p";
+    }
+
+    .fotoMicaela{
+        padding-right: 30px;
+    }
+
+    .navBar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* Estilos especificos para Tablet */
+
+@media screen and (max-width:1025px){
+    .sobreMi{
+        grid-template-areas: 
+        "h1"
+        "img"
+        "p";
+    }
+
+    .fotoMicaela{
+        padding-right: 30px;
+    }
+
+    .navBar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+
+/* estilos de menu */
+.bg-crema{
+    background-color: #f5ebe0;
+}
+
+.menu-boot{
+    ul{ 
+        li{
+            &:hover{
+    background-color: #627a6a;
+                }
+        }
+    }
+}
+
