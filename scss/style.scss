@@ -5,26 +5,25 @@
 }
 
 
-/* Index */
+  /* Index */
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: #3D4F43;
 }
 
 #grilla {
     display: grid;
     grid-template-areas: 
-        "main main main"
-        "DescripcionNarrar DescripcionNarrar DescripcionNarrar"
-        "FotosIndex FotosIndex FotosIndex"
-        "footer footer footer";
+        "main"
+        "descripcionNarrar"
+        "fotosIndex"
+        "footer";
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: repeat(3, 1fr);
-}
+    grid-template-columns: 1fr;
+} 
 
-header{
-    .menu {
-    grid-area: header;
+header {
     font-size: large;
     color: black;
     text-align: center;
@@ -32,27 +31,18 @@ header{
     height: 75px;
     width: 100%;
     margin-bottom: 0;
-    justify-items: end;
-    }
-    a{
-        text-decoration: none;
-        color: black;
-        margin-left: 2rem;
-    }
 }
 
-
-ul{
-    li{
-    display: inline-block;
-    margin-top: 1.5rem;
-    margin-right: 0;
+header{
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2rem;
     }
 }
-
-main.ContenidoPrincipal {
+.contenidoPrincipal {
     grid-area: main;
-    background-color: #3D4F43;
+    background-color: #3D4F43 ;
     color: #f5ebe0;
     padding: 1rem;
     margin: 0;
@@ -64,65 +54,68 @@ main.ContenidoPrincipal {
     margin-right: auto;
     display: block;
     width: 150px; 
-}
+    }
 }
 
 .titulo{
-    h1 {
+h1 {
     text-align: center;
     margin-top: 15px;
     letter-spacing: 0.6rem ;
 }
-}
+} 
 
-section.descripcionNarrar {
-    grid-area: DescripcionNarrar;
+.descripcionNarrar {
+    grid-area: descripcionNarrar;
     text-align: center;
     padding: 1rem;
     padding-top: 2.5rem;
-    background-color: #f5ebe0;
-    font-size: large;
+    background-color: #3D4F43;
+    font-size: 25px;
+    color: #f5ebe0;
+    
 }
 
-section{
-    .fotosIndex {
-    grid-area: FotosIndex;
+.fotosIndex {
+    grid-area: fotosIndex;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     gap: 1rem;
     background-color: #f5ebe0;
-    justify-content: center;
+    height: auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
-        img {
-            width: 100%; 
-            height: auto;
-        }
-    }
 }
 
+  /* No puedo alinear las imagenes ni con justify-content ni align-items. No encuentro el error, lo solucione con margin */
+.fotosIndex{
+img {
+    width: 70%; 
+    height: auto;
+    margin-left: 14%;
+    }
+} 
 
-footer{
-    #pie {
+#pie {
     grid-area: footer;
     background-color: #3D4F43;
     color: #f5ebe0;
-    text-align: center;
+    text-align: left;
     height: 50px;
     font-size: medium;
     padding-top: 15px;
-    padding-bottom: 0;
-}
 }
 
-/* About Me */
+  /* About Me */
 
 .sobreMi{
     display: grid;
     grid-template-areas: 
     " h1 h1 "
-    " img p ";
+    " videoMicaela p";
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto auto;
     background-color: #3D4F43;
     color: #f5ebe0 ;
     column-gap: 15px;
@@ -130,13 +123,17 @@ footer{
 }
 
 .sobreMiTitulo {
+    grid-area: h1;
     font-size: 30px;
     grid-area: h1;
     padding-left: 20px;
-    padding-top: 10px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
 }
 
 .sobreMiDescripcion{
+    grid-area: p;
     color: #3d4f43 ;
     background-color: #f5ebe0;
     font-size: 25px;
@@ -146,52 +143,146 @@ footer{
     padding-left: 50px;
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-right: 80px;
     align-self: center;
     display: flex;
 }
 
-
-.fotoMicaela{
-    grid-area: img;
+.videoMicaela{
+    grid-area: videoMicaela;
     align-items: center;
     padding: 40px 0 80px 30px;
     display: flex;
     justify-content: center;
-    img{
-        width: 100%;
-        height: auto;
-    }
 }
 
+  /* No se como hacer funcionar al align-items: baseline */
 
-.sobreMi-pie{
-    padding-bottom: 0;
-    margin-bottom: 0;
+.sobreMiDescripcion .videoMicaela{
+    align-items: baseline;
+}
+
+.videoMicaela .foto {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+}
+
+#footerAboutMe{
     background-color: #f5ebe0;
-    color: #3D4F43;
-    font-size: medium;
-    height: 50px;
-    padding-top: 15px;
+    color: black;
 }
 
 
-/* Contact */
+  /* Contact */
 
-/* Estilos especificos para mobile  */
+.container{
+    width: 45%;
+    height: auto;
+    padding-bottom: 30px;
+    label{
+        color: #f5ebe0;
+    }
+}
 
-@media screen and (max-width:480px){
+h2{
+    text-align: center;
+    padding-top: 25px;
+    background-color: #3D4F43;
+    color: #f5ebe0;
+}
+
+.sectionInstagram{
+    a{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    padding-bottom: 30px;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    }
+    img{
+    height: 70px;
+    width: auto;
+    bottom: 75px;
+    position: fixed;
+    }
+} 
+
+/* Weddings */
+
+.tituloWeddings{
+    color: #f5ebe0;
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.videosWeddings{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f5ebe0;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    .video{
+        transition: opacity 0.3s ease;
+        opacity: 1; 
+    &:hover{
+        opacity: 0.6;
+    }
+}
+}
+
+/* Backstage */
+
+.otrosTrabajos{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        h1{
+            color: #f5ebe0;
+            text-align: center;
+        }
+    }
+
+.videosBack{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f5ebe0;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    .video{
+        transition: opacity 0.3s ease;
+        opacity: 1; 
+    &:hover{
+        opacity: 0.6;
+    }
+}
+}
+
+
+/*Estilos especificos para tablet*/
+
+@media screen and (max-width: 1024px) {
     .sobreMi{
         grid-template-areas: 
         "h1"
-        "img"
+        "videoMicaela"
         "p";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 
-    .fotoMicaela{
+    .videoMicaela{
         padding-right: 30px;
     }
 
-    .navBar{
+    .navbar{
         position: fixed;
         top: 0;
         left: 0;
@@ -199,42 +290,35 @@ footer{
     }
 }
 
-/* Estilos especificos para Tablet */
+  /* Estilos especificos para mobile  */
 
-@media screen and (max-width:1025px){
+@media screen and (max-width: 480px) {
     .sobreMi{
         grid-template-areas: 
         "h1"
-        "img"
+        "videoMicaela"
         "p";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow: hidden;
     }
 
-    .fotoMicaela{
+    .videoMicaela{
         padding-right: 30px;
     }
 
-    .navBar{
+    .navbar{
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
     }
 }
-
-
-
-/* estilos de menu */
+  /* estilos de menu */
 .bg-crema{
     background-color: #f5ebe0;
 }
 
-.menu-boot{
-    ul{ 
-        li{
-            &:hover{
+.Menu-boot ul li a:hover{
     background-color: #627a6a;
-                }
-        }
-    }
 }
-
