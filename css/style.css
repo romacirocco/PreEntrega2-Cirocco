@@ -76,11 +76,10 @@ header a {
   padding-bottom: 2rem;
 }
 
-/* No puedo alinear las imagenes ni con justify-content ni align-items. No encuentro el error, lo solucione con margin */
 .fotosIndex img {
-  width: 70%;
+  width: 46%;
   height: auto;
-  margin-left: 14%;
+  margin-left: 26%;
 }
 
 #pie {
@@ -139,7 +138,6 @@ header a {
   justify-content: center;
 }
 
-/* No se como hacer funcionar al align-items: baseline */
 .sobreMiDescripcion .videoMicaela {
   align-items: baseline;
 }
@@ -205,10 +203,13 @@ h2 {
   background-color: #f5ebe0;
   padding-top: 4rem;
   padding-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 .videosWeddings .video {
   transition: opacity 0.3s ease;
   opacity: 1;
+  padding-bottom: 3rem;
 }
 .videosWeddings .video:hover {
   opacity: 0.6;
@@ -232,10 +233,13 @@ h2 {
   background-color: #f5ebe0;
   padding-top: 4rem;
   padding-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 .videosBack .video {
   transition: opacity 0.3s ease;
   opacity: 1;
+  padding-bottom: 5rem;
 }
 .videosBack .video:hover {
   opacity: 0.6;
@@ -248,6 +252,10 @@ h2 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
+  .sobreMi .sobreMiDescripcion {
+    margin-left: 8%;
+    margin-bottom: 1rem;
+  }
   .videoMicaela {
     padding-right: 30px;
   }
@@ -257,6 +265,9 @@ h2 {
     left: 0;
     width: 100%;
   }
+  #pie {
+    padding-top: 2rem;
+  }
 }
 /* Estilos especificos para mobile  */
 @media screen and (max-width: 480px) {
@@ -265,6 +276,9 @@ h2 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     overflow: hidden;
+  }
+  .sobreMi .sobreMiTitulo {
+    text-align: center;
   }
   .videoMicaela {
     padding-right: 30px;
