@@ -226,16 +226,17 @@ h2{
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #f5ebe0;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding: 4rem 4rem 2rem 4rem;
     .video{
         transition: opacity 0.3s ease;
         opacity: 1; 
         padding-bottom: 3rem;
     &:hover{
         opacity: 0.6;
+    }
+    iframe{
+        width: 560px;
+        height: 315px;
     }
 }
 }
@@ -257,16 +258,17 @@ h2{
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #f5ebe0;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding: 4rem 4rem 2rem 4rem;
     .video{
         transition: opacity 0.3s ease;
         opacity: 1; 
         padding-bottom: 5rem;
     &:hover{
         opacity: 0.6;
+    }
+    iframe{
+        width: 560px; 
+        height: 315px;
     }
 }
 }
@@ -292,6 +294,7 @@ h2{
         padding-right: 30px;
     }
 
+    
     .navbar{
         position: fixed;
         top: 0;
@@ -302,6 +305,19 @@ h2{
 #pie{
     padding-top: 2rem;
 }
+
+.videosWeddings{
+    flex-direction: column;
+    align-items: center;
+    .video{
+        max-width: 100%;
+        }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+    }   
+
 }
 
   /* Estilos especificos para mobile  */
@@ -330,7 +346,34 @@ h2{
         left: 0;
         width: 100%;
     }
+
+.videosWeddings{
+    flex-direction: column;
+    align-items: center;
+    .video{
+        max-width: 100%;
+        }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+    }
+    
+.videosBack{
+    flex-direction: column;
+    align-items: center;
+    .video{
+        max-width: 100%;
+    }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
 }
+
+
+}   
+
   /* estilos de menu */
 .bg-crema{
     background-color: #f5ebe0;
