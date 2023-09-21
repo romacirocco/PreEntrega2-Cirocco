@@ -215,6 +215,12 @@ h2 {
   width: 560px;
   height: 315px;
 }
+.videosWeddings .video .videoTextoWeddings {
+  text-align: justify;
+  padding-top: 1rem;
+  max-width: 560px;
+  font-size: 18px;
+}
 
 /* Backstage */
 .otrosTrabajos {
@@ -245,6 +251,12 @@ h2 {
 .videosBack .video iframe {
   width: 560px;
   height: 315px;
+}
+.videosBack .video .videoTexto {
+  text-align: justify;
+  padding-top: 1rem;
+  max-width: 560px;
+  font-size: 18px;
 }
 
 /*Estilos especificos para tablet*/

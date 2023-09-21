@@ -238,8 +238,15 @@ h2{
         width: 560px;
         height: 315px;
     }
+    .videoTextoWeddings{
+        text-align: justify;
+        padding-top: 1rem;
+        max-width: 560px;
+        font-size: 18px;
+    }
 }
 }
+
 
 /* Backstage */
 
@@ -269,6 +276,12 @@ h2{
     iframe{
         width: 560px; 
         height: 315px;
+    }
+    .videoTexto{
+        text-align: justify;
+        padding-top: 1rem;
+        max-width: 560px;
+        font-size: 18px;
     }
 }
 }
