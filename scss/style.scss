@@ -127,10 +127,10 @@ img {
     grid-area: h1;
     font-size: 30px;
     grid-area: h1;
-    padding-left: 20px;
+    padding-left: 3rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    text-align: center;
+    text-align: left;
 }
 
 .sobreMiDescripcion{
@@ -140,11 +140,8 @@ img {
     font-size: 25px;
     grid-area: p;
     text-align: center;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-right: 80px;
+    padding: 40px 50px 1rem 50px;
+    margin: 2.2rem 5rem 3rem 0;
     align-self: center;
     display: flex;
 }
@@ -152,25 +149,27 @@ img {
 .videoMicaela{
     grid-area: videoMicaela;
     align-items: center;
-    padding: 40px 0 80px 30px;
+    padding: 40px 20px 80px 30px;
+    margin-left: 3rem;
     display: flex;
     justify-content: center;
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
 }
 
-
-.sobreMiDescripcion .videoMicaela{
-    align-items: baseline;
-}
-
-.videoMicaela .foto {
-    width: 100%;
-    height: auto;
-    justify-self: center;
-}
-
-#footerAboutMe{
+#pieFooter{
+    grid-area: footer;
     background-color: #f5ebe0;
-    color: black;
+    color: #3d4f43;
+    text-align: left;
+    height: 50px;
+    font-size: medium;
+    padding-top: 15px;
+    padding-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
 }
 
 
@@ -300,11 +299,14 @@ h2{
     .sobreMiDescripcion{
         margin-left: 8%;
         margin-bottom: 1rem;
-    }
-    }
-
+        }
     .videoMicaela{
-        padding-right: 30px;
+        justify-self: center;
+        width: 90%;
+        height: 80vh;
+        padding-right: 10%;
+        
+    }
     }
 
     
@@ -336,21 +338,11 @@ h2{
   /* Estilos especificos para mobile  */
 
 @media screen and (max-width: 480px) {
-    .sobreMi{
-        grid-template-areas: 
-        "h1"
-        "videoMicaela"
-        "p";
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        overflow: hidden;
-    .sobreMiTitulo{
-        text-align: center;
-    }
-    }
 
-    .videoMicaela{
-        padding-right: 30px;
+    iframe{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
     }
 
     .navbar{

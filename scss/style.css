@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* Error: expected ":".
+ *     ,
+ * 139 |   iframe{
+ *     |         ^
+ *     '
+ *   scss\style.css 139:9  root stylesheet */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected ":".\a     ╷\a 139 │   iframe{\a     │         ^\a     ╵\a   scss\\style.css 139:9  root stylesheet';
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
