@@ -1,0 +1,22 @@
+@mixin flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $color-secundario;
+    padding: 4rem 4rem 2rem 4rem;
+}
+
+@mixin texto-video{
+    text-align: justify;
+    padding-top: 1rem;
+    max-width: 560px;
+    font-size: 18px;
+}
+
+@mixin animacion-video{
+    transition: opacity 0.3s ease;
+        opacity: 1; 
+        padding-bottom: 5rem;
+}
+

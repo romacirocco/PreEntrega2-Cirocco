@@ -1,21 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+.bg-crema {
+  background-color: #f5ebe0; }
 
-/* Index */
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #3D4F43;
-}
-
-#grilla {
-  display: grid;
-  grid-template-areas: "main" "descripcionNarrar" "fotosIndex" "footer";
-  grid-template-rows: auto auto auto auto;
-  grid-template-columns: 1fr;
-}
+.Menu-boot ul li a:hover {
+  background-color: #3D4F43; }
 
 header {
   font-size: large;
@@ -24,45 +11,52 @@ header {
   background-color: #f5ebe0;
   height: 75px;
   width: 100%;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
+  header a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2rem; }
 
-header a {
-  text-decoration: none;
-  color: black;
-  margin-left: 2rem;
-}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #3D4F43; }
+
+.tituloWeddings, .otrosTrabajos {
+  padding-bottom: 2rem;
+  padding-top: 2rem; }
+
+.contenidoPrincipal, .descripcionNarrar, #pie, .sobreMi, h2 {
+  background-color: #3D4F43;
+  color: #f5ebe0; }
+
+#grilla {
+  display: grid;
+  grid-template-areas: "main" "descripcionNarrar" "fotosIndex" "footer";
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr; }
 
 .contenidoPrincipal {
   grid-area: main;
-  background-color: #3D4F43;
-  color: #f5ebe0;
   padding: 1rem;
-  margin: 0;
-}
+  margin: 0; }
 
 .logo img {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 150px;
-}
+  width: 150px; }
 
 .titulo h1 {
   text-align: center;
   margin-top: 15px;
-  letter-spacing: 0.6rem;
-}
+  letter-spacing: 0.6rem; }
 
 .descripcionNarrar {
   grid-area: descripcionNarrar;
   text-align: center;
   padding: 1rem;
   padding-top: 2.5rem;
-  background-color: #3D4F43;
-  font-size: 25px;
-  color: #f5ebe0;
-}
+  font-size: 25px; }
 
 .fotosIndex {
   grid-area: fotosIndex;
@@ -73,50 +67,39 @@ header a {
   background-color: #f5ebe0;
   height: auto;
   padding-top: 2rem;
-  padding-bottom: 2rem;
-}
+  padding-bottom: 2rem; }
 
 .fotosIndex img {
   width: 46%;
   height: auto;
-  margin-left: 26%;
-}
+  margin-left: 26%; }
 
 #pie {
   grid-area: footer;
-  background-color: #3D4F43;
-  color: #f5ebe0;
   text-align: left;
   height: 50px;
   font-size: medium;
-  padding-top: 15px;
-}
+  padding-top: 15px; }
 
 /* About Me */
 .sobreMi {
   display: grid;
-  grid-template-areas: " h1 h1 " " videoMicaela p";
+  grid-template-areas: " h1 h1 " " videoMicaela p";
   grid-template-columns: 1fr 1fr;
   grid-row: auto auto;
-  background-color: #3D4F43;
-  color: #f5ebe0;
   column-gap: 15px;
-  row-gap: 2px;
-}
+  row-gap: 2px; }
 
 .sobreMiTitulo {
   grid-area: h1;
   font-size: 30px;
   grid-area: h1;
-  padding-left: 3rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  text-align: left;
-}
+  padding: 2rem 0 2rem 3rem;
+  text-align: left; }
 
 .sobreMiDescripcion {
   grid-area: p;
-  color: #3d4f43;
+  color: #3D4F43;
   background-color: #f5ebe0;
   font-size: 25px;
   grid-area: p;
@@ -124,8 +107,7 @@ header a {
   padding: 40px 50px 1rem 50px;
   margin: 2.2rem 5rem 3rem 0;
   align-self: center;
-  display: flex;
-}
+  display: flex; }
 
 .videoMicaela {
   grid-area: videoMicaela;
@@ -133,42 +115,36 @@ header a {
   padding: 40px 20px 80px 30px;
   margin-left: 3rem;
   display: flex;
-  justify-content: center;
-}
-.videoMicaela iframe {
-  width: 100%;
-  height: 100%;
-}
+  justify-content: center; }
+  .videoMicaela iframe {
+    width: 100%;
+    height: 100%; }
 
 #pieFooter {
   grid-area: footer;
   background-color: #f5ebe0;
-  color: #3d4f43;
+  color: #3D4F43;
   text-align: left;
   height: 50px;
   font-size: medium;
   padding-top: 15px;
   padding-bottom: 4rem;
   margin-top: 2rem;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 /* Contact */
 .container {
   width: 45%;
   height: auto;
-  padding-bottom: 30px;
-}
-.container label {
-  color: #f5ebe0;
-}
+  padding-bottom: 30px; }
+  .container .row {
+    gap: 1.5rem; }
+  .container label {
+    color: #f5ebe0; }
 
 h2 {
   text-align: center;
-  padding-top: 25px;
-  background-color: #3D4F43;
-  color: #f5ebe0;
-}
+  padding-top: 25px; }
 
 .sectionInstagram a {
   display: flex;
@@ -176,24 +152,19 @@ h2 {
   text-decoration: none;
   color: black;
   font-size: 25px;
-  padding-bottom: 30px;
   padding-right: 2rem;
-  padding-bottom: 3rem;
-}
+  padding-bottom: 3rem; }
+
 .sectionInstagram img {
   height: 70px;
   width: auto;
   bottom: 75px;
-  position: fixed;
-}
+  position: fixed; }
 
 /* Weddings */
 .tituloWeddings {
   color: #f5ebe0;
-  text-align: center;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-}
+  text-align: center; }
 
 .videosWeddings {
   display: flex;
@@ -201,36 +172,26 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #f5ebe0;
-  padding: 4rem 4rem 2rem 4rem;
-}
-.videosWeddings .video {
-  transition: opacity 0.3s ease;
-  opacity: 1;
-  padding-bottom: 3rem;
-}
-.videosWeddings .video:hover {
-  opacity: 0.6;
-}
-.videosWeddings .video iframe {
-  width: 560px;
-  height: 315px;
-}
-.videosWeddings .video .videoTextoWeddings {
-  text-align: justify;
-  padding-top: 1rem;
-  max-width: 560px;
-  font-size: 18px;
-}
+  padding: 4rem 4rem 2rem 4rem; }
+  .videosWeddings .video {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    padding-bottom: 5rem; }
+    .videosWeddings .video:hover {
+      opacity: 0.6; }
+    .videosWeddings .video iframe {
+      width: 100%;
+      height: 50vh; }
+    .videosWeddings .video .videoTextoWeddings {
+      text-align: justify;
+      padding-top: 1rem;
+      max-width: 560px;
+      font-size: 18px; }
 
 /* Backstage */
-.otrosTrabajos {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 .otrosTrabajos h1 {
   color: #f5ebe0;
-  text-align: center;
-}
+  text-align: center; }
 
 .videosBack {
   display: flex;
@@ -238,108 +199,76 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #f5ebe0;
-  padding: 4rem 4rem 2rem 4rem;
-}
-.videosBack .video {
-  transition: opacity 0.3s ease;
-  opacity: 1;
-  padding-bottom: 5rem;
-}
-.videosBack .video:hover {
-  opacity: 0.6;
-}
-.videosBack .video iframe {
-  width: 560px;
-  height: 315px;
-}
-.videosBack .video .videoTexto {
-  text-align: justify;
-  padding-top: 1rem;
-  max-width: 560px;
-  font-size: 18px;
-}
+  padding: 4rem 4rem 2rem 4rem; }
+  .videosBack .video {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    padding-bottom: 5rem; }
+    .videosBack .video:hover {
+      opacity: 0.6; }
+    .videosBack .video iframe {
+      width: 100%;
+      height: 50vh; }
+    .videosBack .video .videoTexto {
+      text-align: justify;
+      padding-top: 1rem;
+      max-width: 560px;
+      font-size: 18px; }
 
 /*Estilos especificos para tablet*/
 @media screen and (max-width: 1024px) {
   .sobreMi {
-    grid-template-areas: "h1" "videoMicaela" "p";
+    grid-template-areas: "h1" "videoMicaela" "p";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-  .sobreMi .sobreMiDescripcion {
-    margin-left: 8%;
-    margin-bottom: 1rem;
-  }
-  .sobreMi .videoMicaela {
-    justify-self: center;
-    width: 90%;
-    height: 80vh;
-    padding-right: 10%;
-  }
+    grid-template-rows: 1fr; }
+    .sobreMi .sobreMiDescripcion {
+      margin-left: 8%;
+      margin-bottom: 1rem; }
+    .sobreMi .videoMicaela {
+      justify-self: center;
+      width: 90%;
+      height: 80vh;
+      padding-right: 10%; }
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-  }
+    width: 100%; }
   #pie {
-    padding-top: 2rem;
-  }
+    padding-top: 2rem; }
   .videosWeddings {
     flex-direction: column;
-    align-items: center;
-  }
-  .videosWeddings .video {
-    max-width: 100%;
-  }
-  .videosWeddings iframe {
-    width: 100%;
-    height: auto;
-  }
-}
+    align-items: center; }
+    .videosWeddings .video {
+      max-width: 100%; }
+    .videosWeddings iframe {
+      width: 100%;
+      height: auto; } }
+
 /* Estilos especificos para mobile  */
 @media screen and (max-width: 480px) {
   iframe {
     display: flex;
     flex-direction: column;
-    justify-self: center;
-  }
+    justify-self: center; }
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-  }
+    width: 100%; }
   .videosWeddings {
     flex-direction: column;
-    align-items: center;
-  }
-  .videosWeddings .video {
-    max-width: 100%;
-  }
-  .videosWeddings iframe {
-    width: 100%;
-    height: auto;
-  }
+    align-items: center; }
+    .videosWeddings .video {
+      max-width: 100%; }
+    .videosWeddings iframe {
+      width: 100%;
+      height: auto; }
   .videosBack {
     flex-direction: column;
-    align-items: center;
-  }
-  .videosBack .video {
-    max-width: 100%;
-  }
-  .videosBack iframe {
-    width: 100%;
-    height: auto;
-  }
-}
-/* estilos de menu */
-.bg-crema {
-  background-color: #f5ebe0;
-}
-
-.Menu-boot ul li a:hover {
-  background-color: #627a6a;
-}
-
-/*# sourceMappingURL=style.css.map */
+    align-items: center; }
+    .videosBack .video {
+      max-width: 100%; }
+    .videosBack iframe {
+      width: 100%;
+      height: auto; } }

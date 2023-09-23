@@ -1,0 +1,30 @@
+.bg-crema{
+    background-color: $color-secundario;
+    
+}
+
+.Menu-boot{
+    ul{
+        li{
+            a:hover{
+                background-color: $color-principal;
+            }
+        }
+    }
+}
+
+
+header {
+    font-size: large;
+    color: black;
+    text-align: center;
+    background-color: #f5ebe0;
+    height: 75px;
+    width: 100%;
+    margin-bottom: 0;
+    a{
+        text-decoration: none;
+        color: black;
+        margin-left: 2rem;
+    }
+}

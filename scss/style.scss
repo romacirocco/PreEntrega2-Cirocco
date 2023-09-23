@@ -1,16 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
 
-
-  /* Index */
-
-body{
-    font-family: 'Montserrat', sans-serif;
-    background-color: #3D4F43;
-}
+@import "utils/variables";
+@import "utils/mixin";
+@import "html/home";
+@import "utils/extend";
 
 #grilla {
     display: grid;
@@ -23,27 +15,9 @@ body{
     grid-template-columns: 1fr;
 } 
 
-header {
-    font-size: large;
-    color: black;
-    text-align: center;
-    background-color: #f5ebe0;
-    height: 75px;
-    width: 100%;
-    margin-bottom: 0;
-}
-
-header{
-a {
-    text-decoration: none;
-    color: black;
-    margin-left: 2rem;
-    }
-}
 .contenidoPrincipal {
     grid-area: main;
-    background-color: #3D4F43 ;
-    color: #f5ebe0;
+    @extend %colors;
     padding: 1rem;
     margin: 0;
 }
@@ -70,10 +44,8 @@ h1 {
     text-align: center;
     padding: 1rem;
     padding-top: 2.5rem;
-    background-color: #3D4F43;
     font-size: 25px;
-    color: #f5ebe0;
-    
+    @extend %colors;
 }
 
 .fotosIndex {
@@ -82,7 +54,7 @@ h1 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     gap: 1rem;
-    background-color: #f5ebe0;
+    background-color: $color-secundario;
     height: auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -100,8 +72,7 @@ img {
 
 #pie {
     grid-area: footer;
-    background-color: #3D4F43;
-    color: #f5ebe0;
+    @extend %colors;
     text-align: left;
     height: 50px;
     font-size: medium;
@@ -117,8 +88,7 @@ img {
     " videoMicaela p";
     grid-template-columns: 1fr 1fr;
     grid-row: auto auto;
-    background-color: #3D4F43;
-    color: #f5ebe0 ;
+    @extend %colors;
     column-gap: 15px;
     row-gap: 2px;
 }
@@ -127,16 +97,14 @@ img {
     grid-area: h1;
     font-size: 30px;
     grid-area: h1;
-    padding-left: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0 2rem 3rem;
     text-align: left;
 }
 
 .sobreMiDescripcion{
     grid-area: p;
-    color: #3d4f43 ;
-    background-color: #f5ebe0;
+    color: $color-principal ;
+    background-color: $color-secundario;
     font-size: 25px;
     grid-area: p;
     text-align: center;
@@ -161,8 +129,8 @@ img {
 
 #pieFooter{
     grid-area: footer;
-    background-color: #f5ebe0;
-    color: #3d4f43;
+    background-color: $color-secundario;
+    color: $color-principal;
     text-align: left;
     height: 50px;
     font-size: medium;
@@ -179,16 +147,19 @@ img {
     width: 45%;
     height: auto;
     padding-bottom: 30px;
-    label{
-        color: #f5ebe0;
+    .row{
+        gap: 1.5rem;
     }
-}
+    label{
+        color: $color-secundario;
+    }
+    }
+
 
 h2{
     text-align: center;
     padding-top: 25px;
-    background-color: #3D4F43;
-    color: #f5ebe0;
+    @extend %colors
 }
 
 .sectionInstagram{
@@ -198,7 +169,6 @@ h2{
     text-decoration: none;
     color: black;
     font-size: 25px;
-    padding-bottom: 30px;
     padding-right: 2rem;
     padding-bottom: 3rem;
     }
@@ -213,35 +183,24 @@ h2{
 /* Weddings */
 
 .tituloWeddings{
-    color: #f5ebe0;
+    color: $color-secundario;
     text-align: center;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    @extend %estilos;
 }
 
 .videosWeddings{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #f5ebe0;
-    padding: 4rem 4rem 2rem 4rem;
+    @include flex;
     .video{
-        transition: opacity 0.3s ease;
-        opacity: 1; 
-        padding-bottom: 3rem;
+        @include animacion-video;
     &:hover{
         opacity: 0.6;
     }
     iframe{
-        width: 560px;
-        height: 315px;
+        width: 100%;
+        height: 50vh;
     }
     .videoTextoWeddings{
-        text-align: justify;
-        padding-top: 1rem;
-        max-width: 560px;
-        font-size: 18px;
+        @include texto-video;
     }
 }
 }
@@ -250,41 +209,29 @@ h2{
 /* Backstage */
 
 .otrosTrabajos{
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        @extend %estilos;
         h1{
-            color: #f5ebe0;
+            color: $color-secundario;
             text-align: center;
         }
     }
 
 .videosBack{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #f5ebe0;
-    padding: 4rem 4rem 2rem 4rem;
+    @include flex;
     .video{
-        transition: opacity 0.3s ease;
-        opacity: 1; 
-        padding-bottom: 5rem;
+        @include animacion-video;
     &:hover{
         opacity: 0.6;
     }
     iframe{
-        width: 560px; 
-        height: 315px;
+        width: 100%; 
+        height: 50vh;
     }
     .videoTexto{
-        text-align: justify;
-        padding-top: 1rem;
-        max-width: 560px;
-        font-size: 18px;
+        @include texto-video;
     }
 }
 }
-
 
 /*Estilos especificos para tablet*/
 
@@ -378,12 +325,3 @@ h2{
 
 
 }   
-
-  /* estilos de menu */
-.bg-crema{
-    background-color: #f5ebe0;
-}
-
-.Menu-boot ul li a:hover{
-    background-color: #627a6a;
-}
